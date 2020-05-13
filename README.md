@@ -37,3 +37,9 @@ After 72 MB
 ### ObjectSpace
 Класс показывающий количество аллоцировнных объектов
 Неоптимизированный результат: `Total objects diff: 119416`
+
+### MemoryProfiler
+`gem memory_profiler`
+Gem показывающий количество аллоцировнных объектов
+Неоптимизированный результат: `reports/memory_profiler_origin`
+

@@ -1,4 +1,5 @@
 require './task.rb'
+
 def print_object_space_count_objects
   "count_objects: #{ObjectSpace.count_objects}"
 end

@@ -1,0 +1,483 @@
+Total allocated: 441.91 MB (467623 objects)
+Total retained:  4.64 kB (8 objects)
+
+allocated memory by gem
+-----------------------------------
+ 441.91 MB  other
+
+allocated memory by file
+-----------------------------------
+ 441.91 MB  /home/vadim/projects/parser_mem_optimization/task.rb
+
+allocated memory by location
+-----------------------------------
+ 287.67 MB  /home/vadim/projects/parser_mem_optimization/task.rb:52
+ 104.07 MB  /home/vadim/projects/parser_mem_optimization/task.rb:98
+   9.97 MB  /home/vadim/projects/parser_mem_optimization/task.rb:51
+   9.57 MB  /home/vadim/projects/parser_mem_optimization/task.rb:100
+   7.71 MB  /home/vadim/projects/parser_mem_optimization/task.rb:137
+   4.74 MB  /home/vadim/projects/parser_mem_optimization/task.rb:50
+   4.06 MB  /home/vadim/projects/parser_mem_optimization/task.rb:25
+   2.15 MB  /home/vadim/projects/parser_mem_optimization/task.rb:37
+   1.81 MB  /home/vadim/projects/parser_mem_optimization/task.rb:39
+   1.42 MB  /home/vadim/projects/parser_mem_optimization/task.rb:26
+   1.26 MB  /home/vadim/projects/parser_mem_optimization/task.rb:44
+ 993.58 kB  /home/vadim/projects/parser_mem_optimization/task.rb:122
+ 920.29 kB  /home/vadim/projects/parser_mem_optimization/task.rb:140
+ 675.84 kB  /home/vadim/projects/parser_mem_optimization/task.rb:15
+ 480.28 kB  /home/vadim/projects/parser_mem_optimization/task.rb:127
+ 427.95 kB  /home/vadim/projects/parser_mem_optimization/task.rb:112
+ 427.95 kB  /home/vadim/projects/parser_mem_optimization/task.rb:117
+ 406.31 kB  /home/vadim/projects/parser_mem_optimization/task.rb:88
+ 319.49 kB  /home/vadim/projects/parser_mem_optimization/task.rb:99
+ 280.96 kB  /home/vadim/projects/parser_mem_optimization/task.rb:132
+ 258.05 kB  /home/vadim/projects/parser_mem_optimization/task.rb:106
+ 258.05 kB  /home/vadim/projects/parser_mem_optimization/task.rb:111
+ 258.05 kB  /home/vadim/projects/parser_mem_optimization/task.rb:116
+ 258.05 kB  /home/vadim/projects/parser_mem_optimization/task.rb:121
+ 258.05 kB  /home/vadim/projects/parser_mem_optimization/task.rb:126
+ 258.05 kB  /home/vadim/projects/parser_mem_optimization/task.rb:131
+ 258.05 kB  /home/vadim/projects/parser_mem_optimization/task.rb:136
+ 258.05 kB  /home/vadim/projects/parser_mem_optimization/task.rb:16
+ 176.75 kB  /home/vadim/projects/parser_mem_optimization/task.rb:78
+ 122.88 kB  /home/vadim/projects/parser_mem_optimization/task.rb:38
+  67.79 kB  /home/vadim/projects/parser_mem_optimization/task.rb:89
+  67.75 kB  /home/vadim/projects/parser_mem_optimization/task.rb:87
+  57.44 kB  /home/vadim/projects/parser_mem_optimization/task.rb:103
+   2.64 kB  /home/vadim/projects/parser_mem_optimization/task.rb:91
+   1.64 kB  /home/vadim/projects/parser_mem_optimization/task.rb:90
+  168.00 B  /home/vadim/projects/parser_mem_optimization/task.rb:70
+   40.00 B  /home/vadim/projects/parser_mem_optimization/task.rb:46
+   40.00 B  /home/vadim/projects/parser_mem_optimization/task.rb:47
+   40.00 B  /home/vadim/projects/parser_mem_optimization/task.rb:75
+   40.00 B  /home/vadim/projects/parser_mem_optimization/task.rb:94
+
+allocated memory by class
+-----------------------------------
+ 416.75 MB  Array
+  15.22 MB  String
+   7.09 MB  Hash
+   2.16 MB  MatchData
+ 609.41 kB  Date
+  61.44 kB  User
+   8.66 kB  File
+   4.12 kB  Regexp
+  560.00 B  Proc
+  224.00 B  JSON::Ext::Generator::State
+   72.00 B  Thread::Mutex
+
+allocated objects by gem
+-----------------------------------
+    467623  other
+
+allocated objects by file
+-----------------------------------
+    467623  /home/vadim/projects/parser_mem_optimization/task.rb
+
+allocated objects by location
+-----------------------------------
+    110630  /home/vadim/projects/parser_mem_optimization/task.rb:137
+     78464  /home/vadim/projects/parser_mem_optimization/task.rb:50
+     67712  /home/vadim/projects/parser_mem_optimization/task.rb:25
+     53760  /home/vadim/projects/parser_mem_optimization/task.rb:37
+     26928  /home/vadim/projects/parser_mem_optimization/task.rb:52
+     17510  /home/vadim/projects/parser_mem_optimization/task.rb:122
+     13072  /home/vadim/projects/parser_mem_optimization/task.rb:51
+     10759  /home/vadim/projects/parser_mem_optimization/task.rb:39
+     10752  /home/vadim/projects/parser_mem_optimization/task.rb:15
+     10006  /home/vadim/projects/parser_mem_optimization/task.rb:44
+      8465  /home/vadim/projects/parser_mem_optimization/task.rb:88
+      8464  /home/vadim/projects/parser_mem_optimization/task.rb:26
+      7912  /home/vadim/projects/parser_mem_optimization/task.rb:127
+      7680  /home/vadim/projects/parser_mem_optimization/task.rb:112
+      7680  /home/vadim/projects/parser_mem_optimization/task.rb:117
+      4369  /home/vadim/projects/parser_mem_optimization/task.rb:132
+      3072  /home/vadim/projects/parser_mem_optimization/task.rb:100
+      3072  /home/vadim/projects/parser_mem_optimization/task.rb:38
+      3072  /home/vadim/projects/parser_mem_optimization/task.rb:99
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:106
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:111
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:116
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:121
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:126
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:131
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:136
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:16
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:98
+       400  /home/vadim/projects/parser_mem_optimization/task.rb:78
+         8  /home/vadim/projects/parser_mem_optimization/task.rb:140
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:89
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:91
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:103
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:46
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:47
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:70
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:75
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:87
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:90
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:94
+
+allocated objects by class
+-----------------------------------
+    335682  String
+     69254  Array
+     43043  Hash
+      9630  MatchData
+      8464  Date
+      1536  User
+         7  Proc
+         3  Regexp
+         2  File
+         1  JSON::Ext::Generator::State
+         1  Thread::Mutex
+
+retained memory by gem
+-----------------------------------
+   4.64 kB  other
+
+retained memory by file
+-----------------------------------
+   4.64 kB  /home/vadim/projects/parser_mem_optimization/task.rb
+
+retained memory by location
+-----------------------------------
+   4.64 kB  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+retained memory by class
+-----------------------------------
+   4.12 kB  Regexp
+  519.00 B  String
+
+retained objects by gem
+-----------------------------------
+         8  other
+
+retained objects by file
+-----------------------------------
+         8  /home/vadim/projects/parser_mem_optimization/task.rb
+
+retained objects by location
+-----------------------------------
+         8  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+retained objects by class
+-----------------------------------
+         5  String
+         3  Regexp
+
+
+Allocated String Report
+-----------------------------------
+     44608  " "
+     33856  /home/vadim/projects/parser_mem_optimization/task.rb:137
+     10752  /home/vadim/projects/parser_mem_optimization/task.rb:37
+
+     26928  "session"
+     10000  /home/vadim/projects/parser_mem_optimization/task.rb:52
+      8464  /home/vadim/projects/parser_mem_optimization/task.rb:25
+      8464  /home/vadim/projects/parser_mem_optimization/task.rb:50
+
+     20001  ","
+     10000  /home/vadim/projects/parser_mem_optimization/task.rb:50
+      8464  /home/vadim/projects/parser_mem_optimization/task.rb:25
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:91
+
+     13072  "user"
+     10000  /home/vadim/projects/parser_mem_optimization/task.rb:51
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:15
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:50
+
+      3268  "0"
+      1633  /home/vadim/projects/parser_mem_optimization/task.rb:50
+      1618  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        15  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+      3147  "2017"
+      3147  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+      3072  " min."
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:112
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+      3070  "2018"
+      3070  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+      2912  "1"
+      1455  /home/vadim/projects/parser_mem_optimization/task.rb:50
+      1442  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        13  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+      2644  "2"
+      1321  /home/vadim/projects/parser_mem_optimization/task.rb:50
+      1304  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        17  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+      2326  "3"
+      1163  /home/vadim/projects/parser_mem_optimization/task.rb:50
+      1141  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        22  /home/vadim/projects/parser_mem_optimization/task.rb:15
+
+      2010  "4"
+      1005  /home/vadim/projects/parser_mem_optimization/task.rb:50
+       985  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        20  /home/vadim/projects/parser_mem_optimization/task.rb:15
+
+      1892  "2016"
+      1892  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+      1740  "5"
+       870  /home/vadim/projects/parser_mem_optimization/task.rb:50
+       854  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        16  /home/vadim/projects/parser_mem_optimization/task.rb:15
+
+      1536  ", "
+      1536  /home/vadim/projects/parser_mem_optimization/task.rb:122
+
+      1438  "6"
+       717  /home/vadim/projects/parser_mem_optimization/task.rb:50
+       701  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        16  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+      1231  "11"
+      1033  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        95  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        81  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        14  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         4  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         4  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+      1228  "10"
+      1030  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        98  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        81  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        17  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+      1189  "12"
+      1004  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        88  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        73  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        15  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         5  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         4  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+      1164  "7"
+       582  /home/vadim/projects/parser_mem_optimization/task.rb:50
+       569  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        13  /home/vadim/projects/parser_mem_optimization/task.rb:15
+
+      1127  "08"
+      1127  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+      1112  "07"
+      1112  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+      1047  "01"
+      1047  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+      1025  "06"
+      1025  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+      1010  "09"
+      1010  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+       932  "05"
+       932  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+       838  "02"
+       838  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+       828  "8"
+       411  /home/vadim/projects/parser_mem_optimization/task.rb:50
+       394  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        17  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         3  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         3  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+       800  "04"
+       800  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+       786  "03"
+       786  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+       529  "27"
+       287  /home/vadim/projects/parser_mem_optimization/task.rb:137
+       119  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        99  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        20  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         3  /home/vadim/projects/parser_mem_optimization/task.rb:117
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:112
+
+       503  "24"
+       321  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        88  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        70  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        18  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         4  /home/vadim/projects/parser_mem_optimization/task.rb:117
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:112
+
+       502  "19"
+       286  /home/vadim/projects/parser_mem_optimization/task.rb:137
+       108  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        91  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        17  /home/vadim/projects/parser_mem_optimization/task.rb:15
+
+       501  "13"
+       289  /home/vadim/projects/parser_mem_optimization/task.rb:137
+       103  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        89  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        14  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         4  /home/vadim/projects/parser_mem_optimization/task.rb:117
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:112
+
+       500  "28"
+       291  /home/vadim/projects/parser_mem_optimization/task.rb:137
+       103  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        77  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        26  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         3  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+       498  "18"
+       278  /home/vadim/projects/parser_mem_optimization/task.rb:137
+       108  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        88  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        20  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+       485  "29"
+       270  /home/vadim/projects/parser_mem_optimization/task.rb:137
+       102  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        87  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        15  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         7  /home/vadim/projects/parser_mem_optimization/task.rb:117
+         4  /home/vadim/projects/parser_mem_optimization/task.rb:112
+
+       477  "14"
+       260  /home/vadim/projects/parser_mem_optimization/task.rb:137
+       102  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        87  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        15  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         7  /home/vadim/projects/parser_mem_optimization/task.rb:117
+         6  /home/vadim/projects/parser_mem_optimization/task.rb:112
+
+       477  "9"
+       237  /home/vadim/projects/parser_mem_optimization/task.rb:50
+       220  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        17  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:117
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:112
+
+       471  "20"
+       289  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        89  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        72  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        17  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         3  /home/vadim/projects/parser_mem_optimization/task.rb:117
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:112
+
+       468  "21"
+       279  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        92  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        76  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        16  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         3  /home/vadim/projects/parser_mem_optimization/task.rb:117
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:112
+
+       463  "26"
+       265  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        98  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        78  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        20  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:112
+
+       459  "17"
+       271  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        93  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        78  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        15  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+       458  "25"
+       290  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        83  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        74  /home/vadim/projects/parser_mem_optimization/task.rb:25
+         9  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+       450  "23"
+       276  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        84  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        67  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        17  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         3  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         3  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+       447  "22"
+       273  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        83  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        70  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        13  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         5  /home/vadim/projects/parser_mem_optimization/task.rb:117
+         3  /home/vadim/projects/parser_mem_optimization/task.rb:112
+
+       444  "16"
+       266  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        89  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        64  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        25  /home/vadim/projects/parser_mem_optimization/task.rb:15
+
+       432  "30"
+       241  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        92  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        77  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        15  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         4  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         3  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+       423  "15"
+       261  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        79  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        67  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        12  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+       387  "31"
+       191  /home/vadim/projects/parser_mem_optimization/task.rb:137
+        95  /home/vadim/projects/parser_mem_optimization/task.rb:50
+        78  /home/vadim/projects/parser_mem_optimization/task.rb:25
+        17  /home/vadim/projects/parser_mem_optimization/task.rb:15
+         4  /home/vadim/projects/parser_mem_optimization/task.rb:112
+         2  /home/vadim/projects/parser_mem_optimization/task.rb:117
+
+
+Retained String Report
+-----------------------------------
+         1  "('?[-+]?\\d+)-(\\d+)-('?-?\\d+)"
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+         1  "((?:\\d+\\s*:\\s*\\d+(?:\\s*:\\s*\\d+(?:[,.]\\d*)?)?|\\d+\\s*h(?:\\s*\\d+m?(?:\\s*\\d+s?)?)?)(?:\\s*[ap](?:m\\b|\\.m\\.))?|\\d+\\s*[ap](?:m\\b|\\.m\\.))(?:\\s*((?:gmt|utc?)?[-+]\\d+(?:[,.:]\\d+(?::\\d+)?)?|(?-i:[[:alpha:].\\s]+)"
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+         1  "[^-+',./:@[:alnum:]\\[\\]]+"
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+         1  "_bc"
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
+         1  "_comp"
+         1  /home/vadim/projects/parser_mem_optimization/task.rb:137
+
