@@ -9,9 +9,9 @@
 #
 # dot -Tpng graphviz.dot > graphviz.png
 #
-require './task.rb'
+require '../task.rb'
 require 'stackprof'
 
-StackProf.run(mode: :object, out: 'reports/stackprof_origin.dump', raw: true) do
+StackProf.run(mode: :object, out: '../reports/stackprof_origin.dump', raw: true) do
   work
 end

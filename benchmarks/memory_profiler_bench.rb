@@ -5,5 +5,5 @@ report = MemoryProfiler.report do
   work
 end
 
-report.pretty_print(scale_bytes: true, to_file: 'reports/memory_profiler_origin')
+report.pretty_print(scale_bytes: true, to_file: '../reports/memory_profiler_origin')
 

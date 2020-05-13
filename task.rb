@@ -41,7 +41,7 @@ def collect_stats_from_users(report, users_objects, &block)
 end
 
 def work
-  file_lines = File.read('data.txt').split("\n")
+  file_lines = File.read('data/data_10_000.txt').split("\n")
 
   users = []
   sessions = []

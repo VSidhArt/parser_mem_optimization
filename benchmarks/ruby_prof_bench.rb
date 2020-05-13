@@ -16,5 +16,8 @@ end
 # printer = RubyProf::GraphPrinter.new(result)
 # printer.print(File.open("reports/ruby_prof_origin.dot", "w+"))
 #
-printer = RubyProf::GraphHtmlPrinter.new(result)
-printer.print(File.open("reports/ruby_prof_origin.html", "w+"))
+# printer = RubyProf::GraphHtmlPrinter.new(result)
+# printer.print(File.open("reports/ruby_prof_origin.html", "w+"))
+
+printer = RubyProf::CallTreePrinter.new(result)
+printer.print(:path => "../reports", :profile => 'ruby_prof_origin_tree')

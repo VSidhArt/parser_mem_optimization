@@ -1,0 +1,358 @@
+events: memory
+
+fl=
+fn=IO::write^
+0 200
+
+fl=
+fn=JSON/Ext/Generator/State::initialize_copy
+0 0
+
+fl=
+fn=Kernel::initialize_dup
+0 0
+cfl=
+cfn=JSON/Ext/Generator/State::initialize_copy
+calls=1 0
+0 0
+
+fl=
+fn=Kernel::dup
+0 40
+cfl=
+cfn=Kernel::initialize_dup
+calls=1 0
+0 0
+
+fl=
+fn=JSON/Ext/Generator/GeneratorMethods/Hash::to_json
+0 40
+cfl=
+cfn=Kernel::dup
+calls=1 0
+0 40
+
+fl=
+fn=Date::iso8601
+0 338560
+
+fl=
+fn=Array::reverse
+0 61440
+
+fl=
+fn=Date::<=>
+0 0
+
+fl=
+fn=Integer::div
+0 0
+
+fl=
+fn=String::[]=
+0 0
+
+fl=
+fn=MatchData::end
+0 0
+
+fl=
+fn=MatchData::begin
+0 0
+
+fl=
+fn=Regexp::match
+0 677120
+
+fl=
+fn=String::gsub!
+0 0
+
+fl=
+fn=Date::parse^
+0 3047680
+cfl=
+cfn=String::gsub!
+calls=8464 0
+0 0
+cfl=
+cfn=Regexp::match
+calls=16928 0
+0 677120
+cfl=
+cfn=MatchData::begin
+calls=8464 0
+0 0
+cfl=
+cfn=MatchData::end
+calls=8464 0
+0 0
+cfl=
+cfn=String::[]=
+calls=8464 0
+0 0
+cfl=
+cfn=Integer::div
+calls=8464 0
+0 0
+
+fl=
+fn=Array::any?
+0 75400
+cfl=
+cfn=String::upcase
+calls=4492 127
+127 179680
+
+fl=
+fn=Array::max
+0 0
+
+fl=
+fn=String::+
+0 122880
+
+fl=
+fn=Integer::to_s
+0 122880
+
+fl=
+fn=Array::sum
+0 0
+
+fl=
+fn=String::to_i
+0 0
+
+fl=
+fn=Hash::merge
+0 430080
+
+fl=/home/vadim/projects/parser_mem_optimization/task.rb
+fn=Object::collect_stats_from_users
+35 0
+cfl=
+cfn=Array::each
+calls=7 36
+36 9365040
+
+fl=/home/vadim/projects/parser_mem_optimization/task.rb
+fn=User::initialize
+8 0
+
+fl=
+fn=Class::new
+0 61440
+cfl=/home/vadim/projects/parser_mem_optimization/task.rb
+cfn=User::initialize
+calls=1536 0
+0 0
+
+fl=
+fn=Array::select
+0 61440
+
+fl=
+fn=Array::join
+0 61480
+
+fl=
+fn=Array::uniq
+0 80
+
+fl=
+fn=Array::sort
+0 232240
+cfl=
+cfn=Date::<=>
+calls=14789 0
+0 0
+
+fl=
+fn=String::upcase
+0 935960
+
+fl=
+fn=Array::map
+0 675920
+cfl=
+cfn=String::upcase
+calls=16928 88
+88 677120
+cfl=
+cfn=String::to_i
+calls=16928 112
+112 0
+cfl=
+cfn=Date::parse^
+calls=8464 137
+137 3724800
+cfl=
+cfn=Date::iso8601
+calls=8464 137
+137 338560
+
+fl=
+fn=Array::all?
+0 34160
+cfl=
+cfn=String::upcase
+calls=1979 132
+132 79160
+
+fl=
+fn=Array::count
+0 0
+
+fl=/home/vadim/projects/parser_mem_optimization/task.rb
+fn=Object::parse_session
+24 677120
+cfl=
+cfn=String::split
+calls=8464 25
+25 2369920
+
+fl=/home/vadim/projects/parser_mem_optimization/task.rb
+fn=Object::parse_user
+14 122880
+cfl=
+cfn=String::split
+calls=1536 15
+15 368640
+
+fl=
+fn=Array::each
+0 5088320
+cfl=
+cfn=String::split
+calls=10000 50
+50 2738560
+cfl=/home/vadim/projects/parser_mem_optimization/task.rb
+cfn=Object::parse_user
+calls=1536 51
+51 491520
+cfl=/home/vadim/projects/parser_mem_optimization/task.rb
+cfn=Object::parse_session
+calls=8464 52
+52 3047040
+cfl=
+cfn=Array::all?
+calls=10000 78
+78 113320
+cfl=
+cfn=Array::select
+calls=1536 98
+98 61440
+cfl=
+cfn=Class::new
+calls=1536 99
+99 61440
+cfl=
+cfn=Array::count
+calls=1536 107
+107 0
+cfl=
+cfn=Hash::merge
+calls=10752 107
+107 430080
+cfl=
+cfn=Array::map
+calls=16896 112
+112 5077760
+cfl=
+cfn=Array::sum
+calls=1536 112
+112 0
+cfl=
+cfn=Integer::to_s
+calls=3072 112
+112 122880
+cfl=
+cfn=String::+
+calls=3072 112
+112 122880
+cfl=
+cfn=Array::max
+calls=1536 117
+117 0
+cfl=
+cfn=Array::sort
+calls=3072 122
+122 232160
+cfl=
+cfn=Array::join
+calls=1536 122
+122 61440
+cfl=
+cfn=Array::any?
+calls=1536 127
+127 255080
+cfl=
+cfn=Array::reverse
+calls=1536 137
+137 61440
+
+fl=
+fn=String::split
+0 5877160
+
+fl=
+fn=IO::read^
+0 120
+
+fl=/home/vadim/projects/parser_mem_optimization/task.rb
+fn=Object::work
+43 488
+cfl=
+cfn=IO::read^
+calls=1 44
+44 120
+cfl=
+cfn=String::split
+calls=1 44
+44 400040
+cfl=
+cfn=Array::each
+calls=3 49
+49 8600320
+cfl=
+cfn=Array::count
+calls=3 72
+72 0
+cfl=
+cfn=Array::map
+calls=2 85
+85 338640
+cfl=
+cfn=Array::sort
+calls=1 85
+85 80
+cfl=
+cfn=Array::uniq
+calls=1 85
+85 80
+cfl=
+cfn=Array::join
+calls=1 85
+85 40
+cfl=/home/vadim/projects/parser_mem_optimization/task.rb
+cfn=Object::collect_stats_from_users
+calls=7 106
+106 9365040
+cfl=
+cfn=JSON/Ext/Generator/GeneratorMethods/Hash::to_json
+calls=1 140
+140 80
+cfl=
+cfn=IO::write^
+calls=1 140
+140 200
+
+fl=/home/vadim/projects/parser_mem_optimization/ruby_prof_bench.rb
+fn=[global]::
+10 0
+cfl=/home/vadim/projects/parser_mem_optimization/task.rb
+cfn=Object::work
+calls=1 10
+10 18705128
+
