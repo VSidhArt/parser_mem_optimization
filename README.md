@@ -52,3 +52,21 @@ After 72 MB
 Тресирующий профайлер
 Неоптимизированный результат: `reports/stackprof_origin.dump`
 
+## Оптимизации
+`memory_profiler` показал что наибольшее количество памяти аллоцируется массивами
+```
+allocated memory by class
+-----------------------------------
+ 416.75 MB  Array
+```
+в стоке конкатинации массивов `sessions = sessions + [parse_session(line)] if cols[0] == 'session'`
+
+# Решение
+Замена на Array#push
+```
+allocated memory by class
+-----------------------------------
+ 129.58 MB  Array
+```
+
+
