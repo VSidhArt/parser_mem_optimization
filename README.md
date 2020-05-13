@@ -35,11 +35,20 @@ After 72 MB
 ```
 
 ### ObjectSpace
-Класс показывающий количество аллоцировнных объектов
+Класс показывающий количество аллоцировнных объектов `object_space_bench.rb`
 Неоптимизированный результат: `Total objects diff: 119416`
 
 ### MemoryProfiler
 `gem memory_profiler`
-Gem показывающий количество аллоцировнных объектов
+Семплирующий профайлер показывающий количество аллоцировнных объектов `memory_profiler_bench.rb`
 Неоптимизированный результат: `reports/memory_profiler_origin`
+
+### StackProf
+Семплирующий профайлер показывающий количество аллоцировнных объектов, можно создать flamegraph и graphviz
+`stackprof_bench.rb`
+Неоптимизированный результат: `reports/stackprof_origin.dump`
+
+### RubyProf
+Тресирующий профайлер
+Неоптимизированный результат: `reports/stackprof_origin.dump`
 
