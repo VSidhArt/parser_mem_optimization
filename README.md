@@ -37,7 +37,7 @@ allocated memory by class
 -----------------------------------
  129.58 MB  Array
 ```
-
+---
 ### Проблема
 `memory_profiler` показал что наибольшее количество объектов аллоцируется строками
 ```
@@ -52,9 +52,9 @@ allocated objects by class
 -----------------------------------
     188061  String
 ```
-
+---
 ### Проблема
-`stackprof` показал, что наибольшее количество семплов происходится на метода parse_session
+`stackprof` показал, что наибольшее количество семплов происходится на метода parse_session, вызов String#split
 ```
  TOTAL    (pct)     SAMPLES    (pct)     FRAME
 407692 (100.0%)      294644  (72.3%)     Object#work
@@ -71,6 +71,21 @@ allocated objects by class
   8464   (2.6%)        8464   (2.6%)     Object#parse_session
   1536   (0.5%)        1536   (0.5%)     Object#parse_user
 ```
+---
+### Проблема
+`ruby-prof` в режиме `WALL_TIME` выявил, что 90% процента времени тратятся в методе `Array#select`
+```
+Total allocated: 142.14 MB
+```
+### Решение
+Использовать Hash вместо Array для коллекций user и sessions
+Потребление RAM упало c 142Mb до 21Mb, скорость выполнения программы на 10_000 строк снизилась до
+0.1c
+```
+Total allocated: 21.44 MB
+```
+---
+
 
 ## Инструменты
 
