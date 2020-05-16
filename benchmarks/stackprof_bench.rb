@@ -9,9 +9,10 @@
 #
 # dot -Tpng graphviz.dot > graphviz.png
 #
-require '../task.rb'
 require 'stackprof'
+require_relative '../deoptimized.rb'
+require_relative '../optimized.rb'
 
-StackProf.run(mode: :object, out: '../reports/stackprof_origin.dump', raw: true) do
-  work
+StackProf.run(mode: :object, out: 'reports/stackprof_new.dump', raw: true) do
+  ARGV.include?("deopt") ? Deoptimized.work : Optimized.work
 end

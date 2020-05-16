@@ -1,8 +1,9 @@
 require 'benchmark'
-require './task.rb'
+require_relative '../deoptimized.rb'
+require_relative '../optimized.rb'
 
 time = Benchmark.realtime do
-  work
+  ARGV.include?("deopt") ? Deoptimized.work : Optimized.work
 end
 
 puts "Finish in #{time.round(2)}"

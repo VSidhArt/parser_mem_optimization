@@ -1,5 +1,6 @@
-require './task.rb'
 require 'ruby-prof'
+require_relative '../deoptimized.rb'
+require_relative '../optimized.rb'
 
 # RubyProf.measure_mode = RubyProf::WALL_TIME
 # RubyProf.measure_mode = RubyProf::PROCESS_TIME
@@ -7,7 +8,7 @@ require 'ruby-prof'
 RubyProf.measure_mode = RubyProf::MEMORY
 
 result = RubyProf.profile do
-  work
+  ARGV.include?("deopt") ? Deoptimized.work : Optimized.work
 end
 
 # printer = RubyProf::FlatPrinter.new(result)
@@ -20,4 +21,4 @@ end
 # printer.print(File.open("reports/ruby_prof_origin.html", "w+"))
 
 printer = RubyProf::CallTreePrinter.new(result)
-printer.print(:path => "../reports", :profile => 'ruby_prof_origin_tree')
+printer.print(:path => "./reports", :profile => 'ruby_prof_origin_tree')

@@ -20,6 +20,35 @@
 ## FeedBack Loop
 Файл `data_large.txt` - 129Mb слишком большой для быстрого feedback, создан файл `data.txt` на 380Kb, все замеры производятся на нем.
 
+## Оптимизации
+
+
+### Проблема
+`memory_profiler` показал что наибольшее количество памяти аллоцируется массивами
+```
+allocated memory by class
+-----------------------------------
+ 416.75 MB  Array
+```
+в стоке конкатинации массивов `sessions = sessions + [parse_session(line)] if cols[0] == 'session'`
+### Решение
+Замена на Array#push
+```
+allocated memory by class
+-----------------------------------
+ 129.58 MB  Array
+```
+
+### Проблема
+`stackprof` показал, что наибольшее количество семплов происходится на метода parse_session
+```
+ TOTAL    (pct)     SAMPLES    (pct)     FRAME
+407692 (100.0%)      294644  (72.3%)     Object#work
+ 76176  (18.7%)       76176  (18.7%)     Object#parse_session
+191118  (46.9%)       24584   (6.0%)     Object#collect_stats_from_users
+ 12288   (3.0%)       12288   (3.0%)     Object#parse_user
+```
+
 ## Инструменты
 
 ### Time benchmark
@@ -41,32 +70,14 @@ After 72 MB
 ### MemoryProfiler
 `gem memory_profiler`
 Семплирующий профайлер показывающий количество аллоцировнных объектов `memory_profiler_bench.rb`
-Неоптимизированный результат: `reports/memory_profiler_origin`
 
 ### StackProf
 Семплирующий профайлер показывающий количество аллоцировнных объектов, можно создать flamegraph и graphviz
 `stackprof_bench.rb`
-Неоптимизированный результат: `reports/stackprof_origin.dump`
 
 ### RubyProf
 Тресирующий профайлер
 Неоптимизированный результат: `reports/stackprof_origin.dump`
 
-## Оптимизации
-`memory_profiler` показал что наибольшее количество памяти аллоцируется массивами
-```
-allocated memory by class
------------------------------------
- 416.75 MB  Array
-```
-в стоке конкатинации массивов `sessions = sessions + [parse_session(line)] if cols[0] == 'session'`
-
-# Решение
-Замена на Array#push
-```
-allocated memory by class
------------------------------------
- 129.58 MB  Array
-```
 
 
