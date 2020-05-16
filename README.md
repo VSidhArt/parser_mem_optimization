@@ -12,7 +12,6 @@
 
 
 ## Задача
-- Оптимизировать эту программу, выстроив процесс согласно "общему фреймворку оптимизации"
 - Профилировать программу с помощью различных инструментов
 - Добиться того, чтобы программа корректно обработала файл `data_large.txt`;
 
@@ -40,6 +39,21 @@ allocated memory by class
 ```
 
 ### Проблема
+`memory_profiler` показал что наибольшее количество объектов аллоцируется строками
+```
+allocated objects by class
+-----------------------------------
+    224211  String
+```
+### Решение
+использование `# frozen_string_literal: true`
+```
+allocated objects by class
+-----------------------------------
+    188061  String
+```
+
+### Проблема
 `stackprof` показал, что наибольшее количество семплов происходится на метода parse_session
 ```
  TOTAL    (pct)     SAMPLES    (pct)     FRAME
@@ -47,6 +61,15 @@ allocated memory by class
  76176  (18.7%)       76176  (18.7%)     Object#parse_session
 191118  (46.9%)       24584   (6.0%)     Object#collect_stats_from_users
  12288   (3.0%)       12288   (3.0%)     Object#parse_user
+```
+### Решение
+Убрать лишние вызовы String#split
+```
+ TOTAL    (pct)     SAMPLES    (pct)     FRAME
+329228 (100.0%)      294644  (89.5%)     Object#work
+191118  (58.1%)       24584   (7.5%)     Object#collect_stats_from_users
+  8464   (2.6%)        8464   (2.6%)     Object#parse_session
+  1536   (0.5%)        1536   (0.5%)     Object#parse_user
 ```
 
 ## Инструменты
@@ -57,7 +80,7 @@ allocated memory by class
 
 ### Rss memomory
 Запрос у ОСС на количество потребляемой памяти `rss_bench.rb`
-Неоптимизированный результат:
+Неоптимизированный результат на файле 10_000 строк:
 ```
 Before 19 MB
 After 72 MB
@@ -65,7 +88,7 @@ After 72 MB
 
 ### ObjectSpace
 Класс показывающий количество аллоцировнных объектов `object_space_bench.rb`
-Неоптимизированный результат: `Total objects diff: 119416`
+Неоптимизированный результат на файле 10_000 строк: `Total objects diff: 119416`
 
 ### MemoryProfiler
 `gem memory_profiler`
@@ -77,7 +100,6 @@ After 72 MB
 
 ### RubyProf
 Тресирующий профайлер
-Неоптимизированный результат: `reports/stackprof_origin.dump`
 
 
 
