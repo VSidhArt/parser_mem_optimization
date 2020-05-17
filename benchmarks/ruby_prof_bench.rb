@@ -4,10 +4,10 @@ require 'ruby-prof'
 require_relative '../deoptimized.rb'
 require_relative '../optimized.rb'
 
-# RubyProf.measure_mode = RubyProf::WALL_TIME
+RubyProf.measure_mode = RubyProf::WALL_TIME
 # RubyProf.measure_mode = RubyProf::PROCESS_TIME
 # RubyProf.measure_mode = RubyProf::ALLOCATIONS
-RubyProf.measure_mode = RubyProf::WALL_TIME
+# RubyProf.measure_mode = RubyProf::MEMORY
 
 result = RubyProf.profile do
   ARGV.include?('deopt') ? Deoptimized.work : Optimized.work
