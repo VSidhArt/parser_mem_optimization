@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'ruby-prof'
 require_relative '../deoptimized.rb'
 require_relative '../optimized.rb'
@@ -8,7 +10,7 @@ require_relative '../optimized.rb'
 RubyProf.measure_mode = RubyProf::WALL_TIME
 
 result = RubyProf.profile do
-  ARGV.include?("deopt") ? Deoptimized.work : Optimized.work
+  ARGV.include?('deopt') ? Deoptimized.work : Optimized.work
 end
 
 # printer = RubyProf::FlatPrinter.new(result)
@@ -17,8 +19,8 @@ end
 # printer = RubyProf::GraphPrinter.new(result)
 # printer.print(File.open("reports/ruby_prof_origin.dot", "w+"))
 #
- printer = RubyProf::GraphHtmlPrinter.new(result)
- printer.print(File.open("reports/ruby_prof_origin.html", "w+"))
+printer = RubyProf::GraphHtmlPrinter.new(result)
+printer.print(File.open('reports/ruby_prof_origin.html', 'w+'))
 
 # printer = RubyProf::CallTreePrinter.new(result)
 # printer.print(:path => "./reports", :profile => 'ruby_prof_origin_tree')

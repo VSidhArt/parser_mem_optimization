@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'json'
 require 'pry'
 require 'date'
@@ -19,7 +20,7 @@ module Optimized
       'id' => fields[1],
       'first_name' => fields[2],
       'last_name' => fields[3],
-      'age' => fields[4],
+      'age' => fields[4]
     }
   end
 
@@ -44,10 +45,9 @@ module Optimized
       'browsers' => user_browsers.join(', '),
       'usedIE' => user_browsers.any? { |b| b.match?(/INTERNET EXPLORER/) },
       'alwaysUsedChrome' => user_browsers.all? { |b| b.match?(/CHROME/) },
-      'dates' => user_sessions.map{|s| s["date"]}.sort! { |a, b| b <=> a }
+      'dates' => user_sessions.map { |s| s['date'] }.sort! { |a, b| b <=> a }
     }
   end
-
 
   def parse_file(file)
     users = {}
@@ -80,7 +80,6 @@ module Optimized
 
     report[:totalUsers] = users.count
 
-
     uniqueBrowsers = Set.new
 
     sessions.values.flatten.each do |s|
@@ -93,11 +92,11 @@ module Optimized
 
     report['allBrowsers'] =
       sessions.values.flatten
-        .map { |s| s['browser'] }
-        .map { |b| b.upcase }
-        .sort
-        .uniq
-        .join(',')
+              .map { |s| s['browser'] }
+              .map(&:upcase)
+              .sort
+              .uniq
+              .join(',')
 
     # Статистика по пользователям
     users_objects = []
@@ -108,7 +107,6 @@ module Optimized
       user_sesssions = sessions[u_id]
       report['usersStats'][user_key] = user_stat(user_sesssions)
     end
-
 
     File.write('result.json', "#{report.to_json}\n")
   end
