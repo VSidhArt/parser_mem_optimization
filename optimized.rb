@@ -15,7 +15,7 @@ module Optimized
   end
 
   def parse_user(fields)
-    parsed_result = {
+    {
       'id' => fields[1],
       'first_name' => fields[2],
       'last_name' => fields[3],
@@ -24,27 +24,27 @@ module Optimized
   end
 
   def parse_session(fields)
-    parsed_result = {
+    {
       'user_id' => fields[1],
       'session_id' => fields[2],
       'browser' => fields[3],
       'time' => fields[4],
-      'date' => fields[5],
+      'date' => fields[5]
     }
   end
 
-  def user_stat(user_sesssions)
-    sessions_times = user_sesssions.map { |s| s['time'].to_i }
-    user_browsers = user_sesssions.map { |s| s['browser'].upcase }.sort
+  def user_stat(user_sessions)
+    sessions_times = user_sessions.map { |s| s['time'].to_i }
+    user_browsers = user_sessions.map { |s| s['browser'].upcase }.sort
 
     {
-      'sessionsCount' => user_sesssions.count,
+      'sessionsCount' => user_sessions.count,
       'totalTime' => sessions_times.sum.to_s + ' min.',
       'longestSession' => sessions_times.max.to_s + ' min.',
       'browsers' => user_browsers.join(', '),
       'usedIE' => user_browsers.any? { |b| b.match?(/INTERNET EXPLORER/) },
       'alwaysUsedChrome' => user_browsers.all? { |b| b.match?(/CHROME/) },
-      'dates' => user_sesssions.map { |s| Date.strptime(s['date'], "%Y-%m-%d") }.sort!.reverse.map! { |d| d.iso8601 }
+      'dates' => user_sessions.map{|s| s["date"]}.sort! { |a, b| b <=> a }
     }
   end
 
