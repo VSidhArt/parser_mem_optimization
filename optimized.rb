@@ -42,8 +42,7 @@ module Optimized
   def parse_session(fields)
     {
       'user_id' => fields[1],
-      'session_id' => fields[2],
-      'browser' => fields[3].upcase,
+      'browser' => fields[3].upcase!,
       'time' => fields[4].to_i,
       'date' => fields[5].chomp!
     }
@@ -51,15 +50,15 @@ module Optimized
 
   def user_stat(user_sessions)
     sessions_times = user_sessions.map { |s| s['time'] }
-    user_browsers = user_sessions.map { |s| s['browser'] }.sort
+    user_browsers = user_sessions.map { |s| s['browser'] }.sort!
 
     {
       'sessionsCount' => user_sessions.count,
       'totalTime' => sessions_times.sum.to_s + ' min.',
       'longestSession' => sessions_times.max.to_s + ' min.',
       'browsers' => user_browsers.join(', '),
-      'usedIE' => user_browsers.any? { |b| b.match?(/INTERNET EXPLORER/) },
-      'alwaysUsedChrome' => user_browsers.all? { |b| b.match?(/CHROME/) },
+      'usedIE' => user_browsers.any? { |b| b.start_with?("INTERNET EXPLORER") },
+      'alwaysUsedChrome' => user_browsers.all? { |b| b.start_with?("CHROME") },
       'dates' => user_sessions.map { |s| s['date'] }.sort! { |a, b| b <=> a }
     }
   end
@@ -71,13 +70,14 @@ module Optimized
 
     File.open(file).each do |line|
       cols = line.split(',')
-      users[cols[1]] = parse_user(cols) if cols[0] == 'user'
-      next unless cols[0] == 'session'
-
-      id = cols[1]
-      sessions[id] ||= []
-      total_sessions += 1
-      sessions[id] << parse_session(cols)
+      if cols[0].start_with?('user')
+        users[cols[1]] = parse_user(cols)
+      else
+        id = cols[1]
+        sessions[id] ||= []
+        total_sessions += 1
+        sessions[id] << parse_session(cols)
+      end
     end
 
     { users: users, sessions: sessions, total_sessions: total_sessions }
